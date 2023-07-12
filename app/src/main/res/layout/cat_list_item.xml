@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="24dp"
+    app:cardCornerRadius="8dp"
+    app:elevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@id/contentContainer"
+            app:layout_constraintTop_toTopOf="@id/contentContainer"
+            app:srcCompat="@drawable/ic_stub_image" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.Basic.Header"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toTopOf="@id/contentContainer"
+            tools:text="Cheetoh" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.Basic.Caption"
+            app:layout_constraintBottom_toBottomOf="@id/contentContainer"
+            app:layout_constraintEnd_toEndOf="@id/contentContainer"
+            app:layout_constraintStart_toStartOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:text="The Cheetoh has a super affectionate nature and real love for their human companions; they are intelligent with the ability to learn quickly. You can expect that a Cheetoh will be a fun-loving kitty who enjoys playing, running, and jumping through every room in your house." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

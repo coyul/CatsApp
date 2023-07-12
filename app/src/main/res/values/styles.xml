@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Text -->
+    <style name="TextAppearance.Basic" parent="@style/TextAppearance.AppCompat">
+        <item name="fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="TextAppearance.Basic.Header" parent="TextAppearance.Basic">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.Basic.Body" parent="TextAppearance.Basic">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.Basic.Caption" parent="TextAppearance.Basic">
+        <item name="android:textColor">?android:attr/textColorHint</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Cats App</string>
+    <string name="error_text">Unfortunately, something went wrong. Please try to reload the app</string>
+</resources>
