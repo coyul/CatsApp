@@ -23,7 +23,6 @@ class CatsViewModel @Inject constructor(private val catsUseCase: CatsUseCase) : 
             viewModelScope.launch {
                 listStateInternal.value = catsUseCase.getCats().asCatsListResult()
             }
-
         }
     }
 }
