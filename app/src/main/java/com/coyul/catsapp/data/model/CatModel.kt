@@ -1,4 +1,4 @@
-package com.coyul.catsapp.data
+package com.coyul.catsapp.data.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -5,8 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.coyul.catsapp.Result
-import com.coyul.catsapp.data.CatModel
+import com.coyul.catsapp.data.model.CatModel
 import com.coyul.catsapp.domain.CatsUseCase
+import com.coyul.catsapp.presentation.model.Cat
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

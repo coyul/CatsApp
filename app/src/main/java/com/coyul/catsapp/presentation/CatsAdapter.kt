@@ -2,14 +2,15 @@ package com.coyul.catsapp.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.coyul.catsapp.R
 import com.coyul.catsapp.databinding.CatListItemBinding
+import com.coyul.catsapp.presentation.model.Cat
 
-class CatsAdapter : RecyclerView.Adapter<CatsAdapter.ViewHolder>() {
-
-    private var catsList: List<Cat> = emptyList()
+class CatsAdapter : ListAdapter<Cat, CatsAdapter.ViewHolder>(CatDiffCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -21,15 +22,10 @@ class CatsAdapter : RecyclerView.Adapter<CatsAdapter.ViewHolder>() {
         )
     }
 
-    override fun getItemCount(): Int = catsList.size
+    override fun getItemCount(): Int = currentList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
-        holder.bindView(catsList[position])
-
-    fun submitList(list: List<Cat>) {
-        this.catsList = list
-        notifyItemRangeChanged(0, catsList.size - 1)
-    }
+        holder.bindView(currentList[position])
 
     class ViewHolder(
         private val binding: CatListItemBinding
@@ -44,5 +40,13 @@ class CatsAdapter : RecyclerView.Adapter<CatsAdapter.ViewHolder>() {
                 .placeholder(R.drawable.ic_stub_image)
                 .into(binding.image)
         }
+    }
+
+    private class CatDiffCallBack : DiffUtil.ItemCallback<Cat>() {
+        override fun areItemsTheSame(oldItem: Cat, newItem: Cat): Boolean =
+            oldItem == newItem
+
+        override fun areContentsTheSame(oldItem: Cat, newItem: Cat): Boolean =
+            oldItem.description == newItem.description && oldItem.name == newItem.name && oldItem.imageUrl == newItem.imageUrl
     }
 }

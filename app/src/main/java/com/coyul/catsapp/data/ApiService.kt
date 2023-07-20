@@ -1,6 +1,7 @@
 package com.coyul.catsapp.data
 
 import com.coyul.catsapp.BuildConfig
+import com.coyul.catsapp.data.model.CatModel
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers

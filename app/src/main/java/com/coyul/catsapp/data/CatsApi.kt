@@ -1,6 +1,7 @@
 package com.coyul.catsapp.data
 
 import com.coyul.catsapp.Result
+import com.coyul.catsapp.data.model.CatModel
 import retrofit2.Response
 
 class CatsApi(private val service: ApiService) {

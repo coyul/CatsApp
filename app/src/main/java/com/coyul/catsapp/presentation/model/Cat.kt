@@ -1,4 +1,4 @@
-package com.coyul.catsapp.presentation
+package com.coyul.catsapp.presentation.model
 
 data class Cat(
     val name: String,

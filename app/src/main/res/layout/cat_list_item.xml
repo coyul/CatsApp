@@ -29,10 +29,12 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="16dp"
             android:textAppearance="@style/TextAppearance.Basic.Header"
+            android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/image"
             app:layout_constraintTop_toTopOf="@id/contentContainer"
             tools:text="Cheetoh" />
